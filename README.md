@@ -34,5 +34,5 @@ if __name__ == '__main__':
 ## TODO
 - Better exception handling
 - Direct link extractor
-- Upload to PyPi, probably?
+- Upload to PyPi?
 - ???
