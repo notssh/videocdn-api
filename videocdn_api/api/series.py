@@ -11,8 +11,8 @@ class SeriesApi:
                          ordering: Optional[str] = None,
                          direction: Optional[str] = None,
                          query: Optional[str] = None,
-                         field: str = None,
-                         translation: int = None,
+                         field: Optional[str] = None,
+                         translation: Optional[int] = None,
                          year: Optional[int] = None,
                          page: Optional[int] = None,
                          limit: Optional[int] = None,
@@ -69,8 +69,8 @@ class SeriesApi:
                                   ordering: Optional[str] = None,
                                   direction: Optional[str] = None,
                                   query: Optional[str] = None,
-                                  field: str = None,
-                                  translation: int = None,
+                                  field: Optional[str] = None,
+                                  translation: Optional[int] = None,
                                   year: Optional[int] = None,
                                   page: Optional[int] = None,
                                   limit: Optional[int] = None,
@@ -106,8 +106,8 @@ class SeriesApi:
                                ordering: Optional[str] = None,
                                direction: Optional[str] = None,
                                query: Optional[str] = None,
-                               field: str = None,
-                               translation: int = None,
+                               field: Optional[str] = None,
+                               translation: Optional[int] = None,
                                year: Optional[int] = None,
                                page: Optional[int] = None,
                                limit: Optional[int] = None,
@@ -116,7 +116,7 @@ class SeriesApi:
         :param ordering: Sorting by a specific value. Possible values: id, start_date, end_date, created
         :param direction: Sort order. Possible values: acr, desc
         :param query: Search value. A string longer than two characters.
-         For example, "" (title) or  (Kinopoisk ID)
+         For example, "Neon Genesis Evangelion" (title) or 182487 (Kinopoisk ID)
         :param field: Search field. Possible values: title(searches through all *_title fields),
         imdb_id, kinopoisk_id, worldart_id
         :param translation: ID of translation. Get a list of translations - Api.translations.get()
@@ -165,8 +165,8 @@ class SeriesApi:
                                         ordering: Optional[str] = None,
                                         direction: Optional[str] = None,
                                         query: Optional[str] = None,
-                                        field: str = None,
-                                        translation: int = None,
+                                        field: Optional[str] = None,
+                                        translation: Optional[int] = None,
                                         year: Optional[int] = None,
                                         page: Optional[int] = None,
                                         limit: Optional[int] = None,
@@ -177,7 +177,7 @@ class SeriesApi:
         :param ordering: Sorting by a specific value. Possible values: id, released, ru_released, created
         :param direction: Sort order. Possible values: acr, desc
         :param query: Search value. A string longer than two characters.
-         For example, "" (title) or  (Kinopoisk ID)
+         For example, "Neon Genesis Evangelion" (title) or 182487 (Kinopoisk ID)
         :param field: Search field. Possible values: title(searches through all *_title fields),
         imdb_id, kinopoisk_id, worldart_id
         :param translation: ID of translation. Get a list of translations - Api.translations.get()
@@ -203,8 +203,8 @@ class SeriesApi:
                               ordering: Optional[str] = None,
                               direction: Optional[str] = None,
                               query: Optional[str] = None,
-                              field: str = None,
-                              translation: int = None,
+                              field: Optional[str] = None,
+                              translation: Optional[int] = None,
                               year: Optional[int] = None,
                               page: Optional[int] = None,
                               limit: Optional[int] = None,
@@ -213,7 +213,7 @@ class SeriesApi:
         :param ordering: Sorting by a specific value. Possible values: id, start_date, end_date, created
         :param direction: Sort order. Possible values: acr, desc
         :param query: Search value. A string longer than two characters.
-         For example, "" (title) or  (Kinopoisk ID)
+         For example, "КВН. Высшая лига 2020" (title) or 1347307 (Kinopoisk ID)
         :param field: Search field. Possible values: title(searches through all *_title fields),
         imdb_id, kinopoisk_id, worldart_id
         :param translation: ID of translation. Get a list of translations - Api.translations.get()
@@ -275,7 +275,7 @@ class SeriesApi:
         :param ordering: Sorting by a specific value. Possible values: id, released, ru_released, created
         :param direction: Sort order. Possible values: acr, desc
         :param query: Search value. A string longer than two characters.
-         For example, "" (title) or  (Kinopoisk ID)
+         For example, "КВН. Высшая лига 2020" (title) or 1347307 (Kinopoisk ID)
         :param field: Search field. Possible values: title(searches through all *_title fields), imdb_id, kinopoisk_id
         :param translation: ID of translation. Get a list of translations - Api.translations.get()
         :param year: Release year

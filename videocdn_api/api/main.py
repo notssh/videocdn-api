@@ -1,6 +1,7 @@
 import random
 from typing import List, Dict
 from videocdn_api import api
+from videocdn_api.exceptions import ApiFailedException, ApiTokenInvalid
 import aiohttp
 
 
@@ -37,13 +38,14 @@ class Api:
                 # TODO: Exceptions
                 if response.status == 200:
                     if 'login' in response.url.path:
-                        print('Invalid token')
-                        raise Exception
+                        raise ApiTokenInvalid
                     json_res = await response.json()
                     if json_res['result'] is True:
                         return json_res
+                elif response.status == 500:
+                    raise ApiFailedException(response.status, await response.text())
                 else:
-                    raise Exception
+                    raise Exception(response.status, await response.text())
 
     def set_token(self, api_token: str):
         self.api_token = api_token

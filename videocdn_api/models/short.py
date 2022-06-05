@@ -43,6 +43,9 @@ class Item(BaseModel):
     quality: Optional[str]
     translations: List[str]
     translation: Optional[str]
+    seasons_count: Optional[int]
+    episodes_count: Optional[int]
+    episodes: Optional[int]
     iframe_src: str
     year: Optional[datetime.date]
 
