@@ -30,3 +30,9 @@ if __name__ == '__main__':
     - [X] \*-series/episodes
 - [ ] Features
     - [ ] Direct links extractor
+
+## TODO
+- Better exception handling
+- Direct link extractor
+- Upload to PyPi, probably?
+- ???
