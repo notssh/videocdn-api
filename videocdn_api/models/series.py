@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import Optional, List, Union
+from typing import Optional, List
 import datetime
 from videocdn_api.models.translations import TranslationSeriesAlt
 
