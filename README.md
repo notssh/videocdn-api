@@ -8,7 +8,7 @@ Uses aiohttp as client and pydantic for models
 ## Usage example
 ```python
 import asyncio
-from videocdn-api import Api
+from videocdn_api import Api
 api = Api('your_videocdn_token')
 
 async def example():
